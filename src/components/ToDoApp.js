@@ -28,9 +28,10 @@ function ToDoApp() {
         setToDoInput(event.target.value)
     }
 
-    function alert_user(event){
+    function inser_new(event){
         event.preventDefault();
-        alert(todoinput)
+        todos.push({ id: 10,
+        title: todoinput,})
         setToDoInput("")
     }
   return (
@@ -38,7 +39,7 @@ function ToDoApp() {
         <h1>My Todos</h1>
 
         <form>
-            <input value={todoinput} placeholder="enter your todo" onChange={update_text_field}></input>
+            <input value={todoinput} placeholder="enter your todo" onChange={inser_new}></input>
             <button onClick={alert_user}>Add new</button>
         </form>
         {
